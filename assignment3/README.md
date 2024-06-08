@@ -1,6 +1,6 @@
 ## Build project
 
-To build the project run the command below:
+To run the tests and build the project run the command below:
 
 ```console
 mvn package
@@ -11,7 +11,18 @@ mvn package
 To execute the program, run the command below:
 
 ```console
-java -jar .\target\task2-1.0-SNAPSHOT.jar
+ java -jar .\target\assignment3-1.0-SNAPSHOT.jar
 ```
 ## Sample output
-![image](https://github.com/AnikethD22/jeev_assignments/assets/170777937/22e3eda9-5a7b-4226-862d-0e1a43ff4da9)
+
+```console
+1. Add a new student
+2. Remove a student by ID
+3. Update student details by ID
+4. Search for a student by ID
+5. Display all students (sorted by chosen attribute)
+6. Save data and Exit
+
+
+Enter your choice:
+```

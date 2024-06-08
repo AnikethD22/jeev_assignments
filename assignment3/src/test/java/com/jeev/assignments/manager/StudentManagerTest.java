@@ -116,7 +116,7 @@ public class StudentManagerTest {
     }
 
     // Loading from a file with invalid data format
-    // @Test (expected = IllegalArgumentException.class)
+    @Test (expected = IllegalArgumentException.class)
     public void test_loading_invalid_data_format() {
         StudentManager manager = new StudentManager("invalid_data.txt");
         manager.loadFromFile("invalid_data.txt");
