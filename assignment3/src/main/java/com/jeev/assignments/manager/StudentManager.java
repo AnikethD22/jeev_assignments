@@ -15,6 +15,10 @@ public class StudentManager {
     private HashMap<Integer, Student> studentMap;
     private TreeSet<Student> sortedStudents;
 
+    /**
+     * Constructor that initializes the student manager and loads students from a file.
+     * @param filepathString the path to the file containing student data.
+     */
     public StudentManager(String filepathString) {
         students = new ArrayList<>();
         studentMap = new HashMap<>();
@@ -22,6 +26,11 @@ public class StudentManager {
         loadFromFile(filepathString);
     }
 
+    /**
+     * Adds a new student to the manager.
+     * @param student the student to be added.
+     * @throws IllegalArgumentException if the student is null or a student with the same ID already exists.
+     */
     public void addStudent(Student student) {
         if (student == null) {
             throw new IllegalArgumentException("Student cannot be null.");
@@ -34,6 +43,11 @@ public class StudentManager {
         sortedStudents.add(student);
     }
 
+    /**
+     * Removes a student from the manager by ID.
+     * @param id the ID of the student to be removed.
+     * @throws IllegalArgumentException if the ID is not positive or no student with the ID exists.
+     */
     public void removeStudent(int id) {
         if (id <= 0) {
             throw new IllegalArgumentException("ID must be a positive integer.");
@@ -50,6 +64,15 @@ public class StudentManager {
         }
     }
 
+    /**
+     * Updates the details of an existing student.
+     * @param id the ID of the student to be updated.
+     * @param name the new name of the student.
+     * @param age the new age of the student.
+     * @param grade the new grade of the student.
+     * @param address the new address of the student.
+     * @throws IllegalArgumentException if any of the parameters are invalid.
+     */
     public void updateStudent(int id, String name, int age, String grade, String address) {
         if (id <= 0) {
             throw new IllegalArgumentException("ID must be a positive integer.");
@@ -78,6 +101,12 @@ public class StudentManager {
         }
     }
 
+    /**
+     * Searches for a student by ID.
+     * @param id the ID of the student to be searched.
+     * @return the student with the given ID.
+     * @throws IllegalArgumentException if the ID is not positive or no student with the ID exists.
+     */
     public Student searchStudent(int id) {
         if (id <= 0) {
             throw new IllegalArgumentException("ID must be a positive integer.");
@@ -88,18 +117,28 @@ public class StudentManager {
         return studentMap.get(id);
     }
 
+    /**
+     * Displays all students.
+     */
     public void displayAllStudents() {
         for (Student student : students) {
             System.out.println(student);
         }
     }
 
+    /**
+     * Displays all students sorted by name.
+     */
     public void displaySortedStudents() {
         for (Student student : sortedStudents) {
             System.out.println(student);
         }
     }
 
+    /**
+     * Loads students from a file.
+     * @param filename the name of the file to load students from.
+     */
     public void loadFromFile(String filename) {
         File file = new File(filename);
         if (!file.exists()) {
@@ -141,6 +180,10 @@ public class StudentManager {
         }
     }
 
+    /**
+     * Saves students to a file.
+     * @param filename the name of the file to save students to.
+     */
     public void saveToFile(String filename) {
         try (PrintWriter writer = new PrintWriter(new File(filename))) {
             for (Student student : students) {
