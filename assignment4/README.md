@@ -29,5 +29,17 @@ java -cp ".m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.
 5. Display all students
 6. Exit
 
-Enter your choice:
+
+Enter your choice: 1
+Enter Student ID: 1
+Enter the Student Name: 1
+Enter Student Age: 1
+Enter Student Grade: 1
+Enter Student Address: 1
+
+ERROR: Student with the id 1 exists. Please enter unique student ID.
+
+[Student{id=1, name='Deepak', age=15, grade='12', address='11 jjs '}]
+Press Enter to continue...
+
 ```
