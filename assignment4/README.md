@@ -1,3 +1,10 @@
+## Setup project
+
+Please install MySQL server if already doesnt exist.
+Update the src\main\resources\db.properties file with the server info to connect.
+
+The program creates the table if doesnt exist already.
+
 ## Build project
 
 To run the tests and build the project run the command below:
