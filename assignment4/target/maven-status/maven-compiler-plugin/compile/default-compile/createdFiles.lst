@@ -1,0 +1,5 @@
+com\jeev\assignments\App.class
+com\jeev\assignments\student\Student.class
+com\jeev\assignments\dao\StudentDAO.class
+com\jeev\assignments\dao\StudentDAOImpl.class
+com\jeev\assignments\service\StudentService.class
